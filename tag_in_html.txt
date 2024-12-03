@@ -1,0 +1,10 @@
+Các thẻ thông dụng
+1. h1 - h6 =>heading
+2. p =>paragraph
+3. img =>ảnh (src, alt)
+4. a =>anchor (href, neo liên kết tới trang khác)
+5. ul, li =>hiển thị dạng danh sách
+6. table (td trong tr trong tbody tương ứng với th)
+7. input (type="text")
+8. button => để ấn vào
+9. div => tạo khối bao quanh

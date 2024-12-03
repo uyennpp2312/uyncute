@@ -1,0 +1,119 @@
+1. Các cách để sử dụng CSS trong html
+- Internal: sử dụng cặp thẻ style trong chính file html
+- External: link 1 file css với html
+- Inline: trong dòng đó luôn
+
+2. CSS selectors: ID & Class
+ID: 
+- #id {}
+class: chung style => chung 1 class
+- .class {}
+
+3. Priority
+- ko có sự ưu tiên giữa internal hay external
+- inline:1000
+- #id: 100
+- .class: 10
+- tag: 1
+- equal specificity
+- important: ưu tiên nhất
+
+4. Variable: để dễ dàng thay đổi hàng loạt
+- sử dụng lớp giả root(global)
+:root {
+    --text-color: red;
+}
+
+h1{
+    color: var(--text-color);
+}
+- sử dụng biến local
+
+4. CSS Units
+- Absolute units: ko bị thay đổi kích thước
++> px
++> pt
++> cm, mm
++> inch
++> pc
+- Relative units: bị thay đổi kích thước 
++> %: phụ thuộc vào thẻ
++> rem: phụ thuộc vào thẻ html
++> em: phụ thuộc vào thẻ gần nhất chứa nó
++> vw, vh: bao nhiêu % trình duyệt
+
+5. CSS Functions
+- var()
+- linear-gradient()
+- rgba()
+- rgb()
+- calc()
+- attr()
+
+6. Pseudo classes (lớp giả)
+- :root: tham chiếu đến thẻ html toàn file 
+- :hover: chỉ được kích hoạt khi di chuột vào
+- :active: chỉ được kích hoạt khi bấm chuột vào
+- :first-child: thẻ con đầu tiên
+- :last-child: thẻ con cuối cùng
+cú pháp : tên thẻ + pseudo class
+
+7. CSS pseudo-elements
+- ::before
+- ::after
+- ::first-letter
+- ::first-line
+- ::selection
+* Ko thể thiếu content: "";
+               display: block; (nếu là các hình khối)
+
+8. Padding(đệm), Border(viền), Margin(khoảng cách lề)
+--Padding (đệm)
+- viết tắt (theo chiều kim đồng hồ)
+    +> padding: 10px; =>đệm 4 phía 10px
+    +> padding: 10px 12 px; =>đệm trên dưới 10px, trái phải 12px
+    +> padding: 10px 12px 8px; =>đệm trên 10px, trái phải 10px, dưới 8px
+    +> padding: 10px 12px 8px 6px; =>đệm trên 10px, phải 12px, dưới 8px, trái 6px
+--Border (viền)
+- Viết ngắn:
+    +> border: 10px solid green;
+    +> border-top: 10px;
+    +> ...
+--Margin: tạo khoảng cách
+- Viết ngắn: giống padding
+
+9. Box-sizing
+- box-sizing: content-box; =>trả về như cũ
+- box-sizing: border-box;
+
+10. Thuộc tính tạo nền:
+--background-image:
+-Cú pháp: background-image: url(), url(--url--);//nhiều hình ảnh
+    +> background-repeat: no-repeat; (repeat-x, repeat-y)
+    +> background-image: linear-gradient(hướng xoay(0->360deg), màu, màu)
+--background-size: cover, contain
+    +> background-size: contain; =>lấy chiều ngang dài nhất có thể, đảm bảo ảnh ko bị che khuất
+    +> background-size: cover; =>lấy chiều ngang, chấp nhận việc ảnh bị che khuất
+--background-origin: border-box;
+--background-position: 
+--shorthand
+- background: url() no-repeat center / contain
+
+11. CSS Colors
+
+12. CSS position relative
+- relative: phụ thuộc vào vị trí chính nó
+    +> top, left, right, bottom: chỉ hoạt động khi có position
+    +> cú pháp: position: relative
+- absolute: phụ thuộc vào thẻ cha gần nhất chứa thuộc tính position
+    +> ưu tiên top, left
+    +> cách tạo 1 lớp màng phủ toàn trang web: top: 0; bottom: 0; left: 0; right: 0;
+    +> cú pháp: position: absolute
+- fixed: dùng khi phụ thuộc trình duyệt, có tác dungj làm thẻ ko bị thay đổi vị trí khi kéo trình duyệt
+    +>
+
+- sticky:
++> position: sticky
+
+
+
